@@ -1,0 +1,50 @@
+<ActionBar class="action-bar">
+    <Label class="action-bar-title" text="Dev Summit Talks"></Label>
+</ActionBar>
+
+<TabView (selectedIndexChanged)="onSelectedIndexChanged($event)">
+    <StackLayout *tabItem="{title: 'Sala 1'}">
+        <ScrollView>
+            <StackLayout height="100%">
+                <ListView height="100%" [items]="talks" (itemTap)="onItemTap($event)">
+                    <ng-template let-talk="item" let-i="index" let-odd="odd" let-even="even">
+                        <Label [text]="talk.name" textWrap="true" class="m-15 h2 text-left"></Label>
+                    </ng-template>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Sala 2'}">
+        <ScrollView>
+            <StackLayout height="100%">
+                <ListView height="100%" [items]="talks" (itemTap)="onItemTap($event)">
+                    <ng-template let-talk="item" let-i="index" let-odd="odd" let-even="even">
+                        <Label [text]="talk.name" textWrap="true" class="m-15 h2 text-left"></Label>
+                    </ng-template>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Sala 3'}">
+        <ScrollView>
+            <StackLayout height="100%">
+                <ListView height="100%" [items]="talks" (itemTap)="onItemTap($event)">
+                    <ng-template let-talk="item" let-i="index" let-odd="odd" let-even="even">
+                        <Label [text]="talk.name" textWrap="true" class="m-15 h2 text-left"></Label>
+                    </ng-template>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Sala 4'}">
+        <ScrollView>
+            <StackLayout height="100%">
+                <ListView height="100%" [items]="talks" (itemTap)="onItemTap($event)">
+                    <ng-template let-talk="item" let-i="index" let-odd="odd" let-even="even">
+                        <Label [text]="talk.name" textWrap="true" class="m-15 h2 text-left"></Label>
+                    </ng-template>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</TabView>
